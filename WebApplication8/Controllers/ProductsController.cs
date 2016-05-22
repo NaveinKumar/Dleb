@@ -12,9 +12,10 @@ namespace WebApplication8.Controllers
     {
         Product[] products = new Product[] 
         { 
-            new Product { Id = 1, Name = "Tomato Soup", Category = "Groceries", Price = 1 }, 
-            new Product { Id = 2, Name = "Tea", Category = "Toys", Price = 3.75M }, 
-            new Product { Id = 3, Name = "Cofee", Category = "Hardware", Price = 16.99M } 
+            new Product { Id = 1, Name = "Idly", Category = "Groceries", Price = 20.00M }, 
+            new Product { Id = 2, Name = "Tea", Category = "Toys", Price = 10.00M }, 
+            new Product { Id = 3, Name = "Cofee", Category = "Hardware", Price = 15.00M } 
+
         };
 
         public IEnumerable<Product> GetAllProducts()
