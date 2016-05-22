@@ -6,13 +6,16 @@
 <body>
     <div>
         <h2>All Products</h2>
+        <div id="hide">
+            <h5>Products Loading Please wait... </h5>
+        </div>
         <ul id="products" />
     </div>
     <div>
         <h2>Search by ID</h2>
         <input type="text" id="prodId" size="5" />
         <input type="button" value="Search" onclick="find();" />
-        <p id="product" />
+        <p id="product"  />
     </div>
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
@@ -23,6 +26,7 @@
       // Send an AJAX request
       $.getJSON(uri)
           .done(function (data) {
+              $('#hide').hide();
             // On success, 'data' contains a list of products.
             $.each(data, function (key, item) {
               // Add a list item for the product.
